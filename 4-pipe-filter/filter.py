@@ -32,6 +32,8 @@ class FilterC(FilterSuper):
   
   def filter(self, data):
     data2 = copy.deepcopy(data)
-    data2.sort(reverse=True)
-    largest = data2[0]
+    f = FilterB()
+    data3 = f.filter(data2)
+    data3.sort(reverse=True)
+    largest = data3[0]
     return [elem / largest for elem in data]
