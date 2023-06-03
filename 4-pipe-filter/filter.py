@@ -7,7 +7,7 @@ class FilterSuper:
   def filter(self, data):
     return data
   
-
+# sort
 class FilterA(FilterSuper):
   def __init__(self):
     FilterSuper.__init__(self)
@@ -17,7 +17,7 @@ class FilterA(FilterSuper):
     data2.sort()
     return data2
   
-
+# absolute
 class FilterB(FilterSuper):
   def __init__(self):
     FilterSuper.__init__(self)
@@ -25,7 +25,7 @@ class FilterB(FilterSuper):
   def filter(self, data):
     return [abs(elem) for elem in data]
   
-
+# normalized
 class FilterC(FilterSuper):
   def __init__(self):
     FilterSuper.__init__(self)
