@@ -55,5 +55,6 @@ def test_process_tasks(master, slaves):
         slave.start()
     master.process_tasks()
     results = master.collect_results()
+    results.sort()
     assert len(results) == 3
     assert results == ["TASK1", "TASK2", "TASK3"]
